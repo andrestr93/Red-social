@@ -64,3 +64,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/config', 'usercontroller@config')->name('config');
+Route::post('/user/update' , 'usercontroller@update') ->name('user.update');
+Route::get('/user/avatar/{filename}' , 'usercontroller@getImage') ->name('user.avatar');
+Route::get('/subir-imagen' , 'ImagenController@create') ->name('image.create');
+Route::post('/image/save' , 'ImagenController@save') ->name('image.save');
+Route::get('/image/file/{filename}' , 'ImagenController@getImage') ->name('image.file');
+

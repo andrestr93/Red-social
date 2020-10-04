@@ -4,20 +4,40 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+            @include('includes.message')
+
+            @foreach ($images as $image)
+
+            <div class="card pub_image">
+
+                <div class="card-reader">
+
+                    @if($image->user->image)
+
+                    <div class="container-avatar" >{{$image->user->nick}}
+                        <img src="{{route('user.avatar' , ['filename' =>$image->user->image]) }}" class="avatar2" />
+
+
+                    </div>
+
+
                     @endif
 
-                    You are logged in!
                 </div>
+
+                <div class="card-body">
+
+
+                    <img src="{{ route('image.file' , ['filename' => $image->image_path]) }}"/>
+
+
+                </div>
+                
+                <p>{{$image->description}}</p>
             </div>
+            @endforeach
         </div>
     </div>
 </div>
-@endsection
+    @endsection

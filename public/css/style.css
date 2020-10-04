@@ -1,0 +1,39 @@
+.avatar{
+    
+    display: block;
+    width: 180px;
+}
+
+
+  .navbar .container-avatar {
+    
+    height: 40px;
+    width: 40px;
+    border-radius: 900px;
+    overflow: hidden;
+    margin-left: 10px;
+    
+    
+}
+
+  .navbar .container-avatar img {
+    
+    height: 100%;
+    width: 100%;
+}
+
+
+
+   
+    .container-avatar .avatar2{
+       
+    height: 40px;
+    width: 40px;
+    border-radius: 900px;
+    overflow: hidden;
+    margin-left: 10px;
+    
+   }
+   
+   
+   .user
