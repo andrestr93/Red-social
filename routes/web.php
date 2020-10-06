@@ -70,4 +70,4 @@ Route::get('/user/avatar/{filename}' , 'usercontroller@getImage') ->name('user.a
 Route::get('/subir-imagen' , 'ImagenController@create') ->name('image.create');
 Route::post('/image/save' , 'ImagenController@save') ->name('image.save');
 Route::get('/image/file/{filename}' , 'ImagenController@getImage') ->name('image.file');
-
+Route::get('/image/{id}' , 'ImagenController@detail') ->name('image.detail');

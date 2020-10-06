@@ -1,3 +1,5 @@
+
+/*estilos de la cabecera */
 .avatar{
     
     display: block;
@@ -24,6 +26,7 @@
 
 
 
+/* estilos de la pagina principal  */
    
     .container-avatar .avatar2{
        
@@ -31,9 +34,51 @@
     width: 40px;
     border-radius: 900px;
     overflow: hidden;
-    margin-left: 10px;
+   
     
    }
+
+ 
+ 
    
-   
-   .user
+    .pubimage .card-body{
+
+      padding: 0px;
+
+
+   }
+
+ .image-container{
+overflow: hidden;
+  max-height: 400px;
+  width: 100%;
+ }
+
+ .image-container img{
+
+  width: 100%;
+ }
+
+
+.pub_image .btn-coments{
+
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.likes{
+  float: left;
+  padding: 25px;
+  padding-bottom: 0px;
+  padding-top: 25px;
+ 
+  
+ 
+}
+
+
+.likes img{
+
+  width: 30px;
+
+}
