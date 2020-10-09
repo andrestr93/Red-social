@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
+use App\User;
 
 class usercontroller extends Controller {
     
@@ -92,6 +93,15 @@ class usercontroller extends Controller {
         // y retornamos el response con error de 200 
         return new Response($file , 200);
         
+    }
+
+    public function profile($id){
+
+        $user = User::find($id);
+
+        return view ('user.profile' , [
+            'user' =>$user
+        ]);
     }
 
 }

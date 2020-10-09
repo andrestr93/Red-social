@@ -34,13 +34,9 @@
     width: 40px;
     border-radius: 900px;
     overflow: hidden;
-   
-    
+  
    }
 
- 
- 
-   
     .pubimage .card-body{
 
       padding: 0px;
@@ -58,6 +54,14 @@ overflow: hidden;
 
   width: 100%;
  }
+
+  .pub-image-detail{
+
+    max-width: 1500px;
+ }
+
+
+
 
 
 .pub_image .btn-coments{
