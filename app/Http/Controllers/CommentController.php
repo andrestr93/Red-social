@@ -11,6 +11,7 @@ class CommentController extends Controller {
         $this->middleware( 'auth' );
     }
 
+
     // funcion para agregar comentarios en las imagenes y guardarlos en la base de datos
     public function save( Request $request ) {
 
@@ -20,6 +21,8 @@ class CommentController extends Controller {
             'content'  => 'string|required',
         ] );
         // Recoger los datos
+
+        
 
         $user = \Auth::user();
         $image_id = $request->input( 'image_id' );

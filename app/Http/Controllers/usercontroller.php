@@ -9,12 +9,30 @@ use Illuminate\Support\Facades\File;
 use App\User;
 
 class usercontroller extends Controller {
+
+
     
     // constructor que hace que no puedas ingresar a la ocnfiguracion sin estar identificado 
         public function __construct()
     {
         $this->middleware('auth');
     }
+
+    public function index($search = null){
+		if(!empty($search)){
+			$users = User::where('nick', 'LIKE', '%'.$search.'%')
+							->orWhere('name', 'LIKE', '%'.$search.'%')
+							->orWhere('surname', 'LIKE', '%'.$search.'%')
+							->orderBy('id', 'desc')
+							->paginate(5);
+		}else{
+			$users = User::orderBy('id', 'desc')->paginate(5);
+		}
+		
+		return view('user.index',[
+			'users' => $users
+		]);
+	}
 
     public function config() {
 
@@ -103,5 +121,7 @@ class usercontroller extends Controller {
             'user' =>$user
         ]);
     }
+
+  
 
 }

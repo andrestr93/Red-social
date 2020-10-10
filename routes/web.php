@@ -61,21 +61,35 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// GENERALES
 Auth::routes();
-
+// RUTAS USUARIOS
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/config', 'usercontroller@config')->name('config');
 Route::post('/user/update' , 'usercontroller@update') ->name('user.update');
+Route::get('/perfil/{id}' , 'usercontroller@profile') ->name('profile');
 Route::get('/user/avatar/{filename}' , 'usercontroller@getImage') ->name('user.avatar');
+Route::get('/gente/{search?}', 'usercontroller@index')->name('user.index');
+
+// RUTAS IMAGenes
 Route::get('/subir-imagen' , 'ImagenController@create') ->name('image.create');
 Route::post('/image/save' , 'ImagenController@save') ->name('image.save');
 Route::get('/image/file/{filename}' , 'ImagenController@getImage') ->name('image.file');
 Route::get('/image/{id}' , 'ImagenController@detail') ->name('image.detail');
+Route::get('/image/delete/{id}', 'ImagenController@delete')->name('image.delete');
+Route::get('/imagen/editar/{id}', 'ImagenController@edit')->name('image.edit');
+Route::post('/image/update' , 'ImagenController@update') ->name('image.update');
+
+//RUTAS COMENTARIOS
 Route::post('/comment/save' , 'CommentController@save') ->name('comment.save');
 Route::get('/comment/delete/{id}' , 'CommentController@delete') ->name('comment.delete');
+
+//RUTAS LIKES
 Route::get('/like/{image_id}' , 'LikeController@like') ->name('like.save');
 Route::get('/dislike/{image_id}' , 'LikeController@dislike') ->name('like.delete');
 Route::get('/likes' , 'LikeController@index') ->name('likes');
-Route::get('/perfil/{id}' , 'usercontroller@profile') ->name('profile');
+
+
+
 
 

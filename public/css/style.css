@@ -75,14 +75,45 @@ overflow: hidden;
   padding: 25px;
   padding-bottom: 0px;
   padding-top: 25px;
- 
-  
- 
-}
 
+}
 
 .likes img{
 
   width: 30px;
+
+}
+
+.profile-user .container-avatar{
+
+  width: 150px;
+  height: 150px;
+  border-radius: 900px;
+  overflow: hidden;
+  float: left;
+  display: block;
+}
+
+.profile-user .container-avatar img{
+
+height: 100%;
+width: 100%;
+}
+
+
+.profile-user .user-info{
+
+  margin-top: 50px;
+  float: left;
+  padding-left: 25px;
+
+}
+
+#advertencia{
+
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
 
 }

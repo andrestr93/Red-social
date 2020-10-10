@@ -14,7 +14,7 @@
         <div class="data-user">
 
             <!-- visualizamos el nick  -->
-            <p>{{$image->user->nick}}</p>
+           <a href="{{route('profile' , ['id' =>$image->user->id])}}"> <p>{{$image->user->nick}}</p></a>
 
         </div>
 
@@ -68,7 +68,7 @@
 
 
 
-    <a href="" class="btn btn-sm btn-warning btn-coments">
+    <a href="{{ route ('image.detail', ['id'=>$image->id])}}" class="btn btn-sm btn-warning btn-coments">
         Comentarios ({{count($image->comments)}})
 
     </a>

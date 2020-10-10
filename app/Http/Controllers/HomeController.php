@@ -7,6 +7,7 @@ use App\Image;
 
 class HomeController extends Controller {
 
+    //'controlador principal '
     /**
      * Create a new controller instance.
      *

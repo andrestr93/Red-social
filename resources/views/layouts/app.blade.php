@@ -24,6 +24,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
+<!-- MENU PRINCIPAL -->
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
@@ -69,7 +70,12 @@
                         <li>
 
                         </li>
-                        <a class="nav-link" href="{{route('likes')}}">Imagnes Favoritas</a>
+                        <a class="nav-link" href="{{route('likes')}}">Imagenes Favoritas</a>
+
+                        <li>
+
+                        </li>
+                        <a class="nav-link" href="{{route('user.index')}}">Gente</a>
 
                         <li>
 
