@@ -1,6 +1,6 @@
 # RED SOCIAL
 
-# CAPTURAS DE PANTALLAS
+# CAPTURAS DE PANTALLA
 
 ![Scheme](images/capturasdepantalla/captura1.png)
 
