@@ -2,12 +2,12 @@
 
 # CAPTURAS DE PANTALLA
 
-![Scheme](images/capturasredsocial/captura1.png)
+![Scheme](images/capturasderedsocial/captura1.png)
 
 
-![Scheme](images/capturasredsocial/captura2.png)
+![Scheme](images/capturasderedsocial/captura2.png)
 
 
-![Scheme](images/capturasredsocial/captura3.png)
+![Scheme](images/capturasderedsocial/captura3.png)
 
 
